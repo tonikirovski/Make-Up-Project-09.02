@@ -1,0 +1,9 @@
+<!-- city-details.component.html -->
+<div *ngIf="cityDetails">
+    <h2>{{ cityDetails.name }}</h2>
+    <p>Country: {{ cityDetails.country }}</p>
+    <p>Temperature: {{ cityDetails.temperature }}</p>
+    <p>Weather Condition: {{ cityDetails.weatherCondition }}</p>
+  </div>
+  <div *ngIf="!cityDetails">Loading...</div>
+  

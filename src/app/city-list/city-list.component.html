@@ -1,0 +1,33 @@
+<h2 class="app-title">Toni's Weather App</h2>
+
+<div class="table-container">
+  <table class="city-table">
+    <thead>
+      <button (click)="openAddCityPage()">Add City</button>
+
+
+      <tr>
+        <th>Name</th>
+        <th>Country</th>
+        <th>Temperature
+          <button class="temperature-toggle" (click)="toggleTemperatureUnit()">
+            {{ selectedTemperatureUnit }}
+          </button>
+        </th>
+        <th>Weather Condition</th>
+        <th>Actions</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let city of cities" class="city-row">
+        <td>{{ city.name }}</td>
+        <td>{{ city.country }}</td>
+        <td>{{ city.temperature }}</td>
+        <td>{{ city.weatherCondition }}</td>
+        <td>
+          <button (click)="removeCity(city)">Remove</button> 
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

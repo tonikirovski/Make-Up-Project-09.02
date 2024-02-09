@@ -1,0 +1,6 @@
+<form [formGroup]="cityForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="City Name">
+    <input type="text" formControlName="country" placeholder="Country">
+    <button type="submit">Add City</button>
+  </form>
+  
